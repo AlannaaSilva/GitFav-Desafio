@@ -226,7 +226,7 @@ td.user img {
   object-fit: cover;
 }
 
-td .btn-remove {
+td .button-remove {
   background: none;
   color: #f75a68;
   border: none;
@@ -234,11 +234,11 @@ td .btn-remove {
   cursor: pointer;
 }
 
-td .btn-remove:hover {
+td .button-remove:hover {
   color: #eb4351;
 }
 
-td .btn-remove:active {
+td .button-remove:active {
   color: #a50f1f;
 }
 

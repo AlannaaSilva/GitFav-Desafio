@@ -108,11 +108,11 @@ export class viewFavorites extends Favorites {
       <td class="repositories">${user.public_repos}</td>
       <td class="followers">${user.followers}</td>
       <td>
-        <button class="btn-remove">Remove</button>
+        <button class="button-remove">Remove</button>
       </td>
     `;
 
-    const removeButton = tr.querySelector(".btn-remove");
+    const removeButton = tr.querySelector(".button-remove");
     removeButton.addEventListener("click", () => {
       const isOk = confirm(
         `Você quer mesmo remover ${user.login} dos seus favoritos?`
