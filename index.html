@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GitFav</title>
+
+  <link rel="shortcut icon" href="./assets/Vector.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/main.js" type="module" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>
+        <img src="assets/Gitfav.svg" alt="logoGitfav" />
+      </h1>
+      <div class="search">
+        <label for="input-search" class="sr-only">
+          Digite o Github username que quer favoritar
+        </label>
+        <input id="input-search" type="text" placeholder="Digite o Github username que quer favoritar" />
+        <button id="btn-search">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <image xlink:href="./assets/Vector.png" width="24" height="24" />
+        </svg>
+          </svg>
+         Favoritar
+        </button>
+      </div>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Repositórios</th>
+            <th>Seguidores</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty-state">
+        <img src="./assets/Estrela.svg" alt="" />
+        <p>Nenhum favorito ainda</p>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
