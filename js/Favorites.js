@@ -29,27 +29,27 @@ export class Favorites {
     }
   }
 
-  save() {
+  saveFavorite() {
     localStorage.setItem("@github-favorites:", JSON.stringify(this.entries));
   }
 
   async addFavorite(username) {
     const userExists = this.entries.find((entry) => entry.login === username);
     if (userExists) {
-      alert("User already exists on your favorites list");
+      alert("Usuário já existe na sua lista de favoritos.");
       return;
     }
 
     try {
       const user = await GithubUser.search(username);
       if (!user.login) {
-        alert("User not found");
+        alert("Usuário não encontrado.");
         return;
       }
 
       this.entries.unshift(user); // Adiciona no início para exibir mais recentes primeiro
       this.render();
-      this.saveFavorite();
+      this.saveFavorite(); // Corrigido para chamar saveFavorite() aqui
     } catch (error) {
       alert(error.message);
     }
@@ -58,7 +58,7 @@ export class Favorites {
   remove(user) {
     this.entries = this.entries.filter((entry) => entry.login !== user.login);
     this.render();
-    this.saveFavorite();
+    this.saveFavorite(); // Corrigido para chamar saveFavorite() aqui
     this.checkUserLength();
   }
 }
@@ -115,11 +115,11 @@ export class viewFavorites extends Favorites {
     const removeButton = tr.querySelector(".btn-remove");
     removeButton.addEventListener("click", () => {
       const isOk = confirm(
-        `Do you really want to remove ${user.login} from your favorites?`
+        `Você quer mesmo remover ${user.login} dos seus favoritos?`
       );
       if (isOk) {
         this.remove(user);
-        alert(`${user.login} was removed from your favorites`);
+        alert(`${user.login} foi removido dos seus favoritos.`);
       }
     });
 

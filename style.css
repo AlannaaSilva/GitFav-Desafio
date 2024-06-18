@@ -14,10 +14,10 @@
   --primary-font: "Roboto", sans-serif;
   --secondary-font: "Roboto Mono", monospace;
 
-  --primary-font-size: 1.6rem;
-  --secondary-font-size: 1.4rem;
+  --primary-font-size: 1.3rem;
+  --secondary-font-size: 1.2rem;
 
-  --primary-font-weight: 400;
+  --primary-font-weight: 200;
   --secondary-font-weight: 700;
 
   font-size: 62.5%;
@@ -39,7 +39,7 @@ body {
   font-family: var(--primary-font);
   background-color: #131318;
   color: #e1e1e6;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 main {
@@ -89,20 +89,6 @@ header img {
   background-color: #06181c;
 }
 
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #7c7c8a;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #7c7c8a;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #7c7c8a;
-}
 
 .search button {
   display: flex;
@@ -157,7 +143,7 @@ header img {
 }
 
 table * {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
@@ -200,6 +186,7 @@ table th:nth-child(1) {
 table td {
   padding: 1.6rem;
   text-align: left;
+  
 }
 
 tr+tr {
@@ -215,11 +202,10 @@ td.user {
 td.user a {
   color: var(--secondary-color);
   text-decoration: none;
+  font-weight: 200;
+  font-size: 1rem;
 }
 
-td.user span {
-  font-weight: 400;
-}
 
 td.repositories,
 td.followers,
